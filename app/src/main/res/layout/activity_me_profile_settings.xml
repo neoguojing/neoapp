@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        
+        <com.neo.neoapp.UI.views.NeoBasicTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="个人信息" 
+                    android:textSize="20sp"/>
+     </LinearLayout>
+     
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+    
+    <com.neo.neoapp.UI.views.list.NeoCommonListView
+        android:id="@+id/me_profile_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/list_selector_transition"
+        >
+           
+    </com.neo.neoapp.UI.views.list.NeoCommonListView>
+
+</LinearLayout>

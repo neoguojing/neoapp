@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.neo.neoapp"
+    android:versionCode="2"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+    
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>   
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>  
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission> 
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission> 
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission> 
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission> 
+	<uses-permission android:name="android.permission.INTERNET" /> 
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission> 
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission> 
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_SMS"></uses-permission>  
+	<uses-permission android:name="android.permission.SEND_SMS"/>
+	<uses-permission android:name="android.permission.WRITE_SMS" />
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+    
+	<supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+	
+    <application
+        android:name="com.neo.neoapp.NeoBasicApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:hasCode="true">
+        
+         <meta-data  
+				android:name="com.baidu.lbsapi.API_KEY"  
+				android:value="Pq8SAONXDNujGia1sqp90mm2QhmrhMS2" />
+        
+        <provider
+            android:name=".providers.NeoAppContentProvider"
+            android:authorities="com.neo.providers.RecordProvider"
+            android:multiprocess="false" >
+        </provider>
+        
+        <activity
+            android:name="com.neo.neoapp.activities.WelcomeActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait" >
+            //intent 注册
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".activities.FindPwdTabsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.FindPwdPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.FindPwdEmailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.ResetPwdPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.register.RegisterActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.MainTabActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.chat.ChatActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.imageactivity.ImageFactoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.PeopleDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.ImageBrowserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.PeopleStateListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.NeoMeProfileSettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.NeoAppSettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.NeoMeProfileEditActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activities.PeopleStateProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize" >
+        </activity>
+        <activity
+            android:name=".activities.DBOprActivity"
+            android:label="@string/title_activity_dbopr" >
+        </activity>
+        
+        <service   
+    		android:name="com.baidu.location.f" 
+    		android:enabled="true" 
+    		android:process=":remote">  
+        </service>  
+        <service android:name="com.neo.neoapp.services.NeoLongRunningNonStickyServiceImpl">
+        </service>
+        <service android:name="com.neo.neoapp.services.NeoAppBackgroundService">
+        </service>
+        <service android:name="com.neo.neoapp.services.NeoAppRemoteService"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.neo.neoapp.services.INeoAppRemoteServiceInterface" />
+            </intent-filter>
+        </service>
+        
+        <receiver android:name="com.neo.neoapp.broadcasts.NeoAppBroadCastReceiver">
+            <intent-filter>
+                <action android:name="com.neo.neoapp.broadcasts.sendbroadcasts" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.neo.neoapp.broadcasts.NeoLongRunningReceiverImpl">
+            <intent-filter>
+                <action android:name="com.neo.neoapp.broadcasts.longrunningbroadcast" />
+            </intent-filter>
+        </receiver>
+    </application>
+	
+	
+</manifest>

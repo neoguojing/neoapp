@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="fill_parent"  
+    android:layout_height="wrap_content"  
+    android:orientation="vertical" >  
+      
+    
+	<android.support.v4.view.ViewPager
+        android:id="@+id/Brand_Scroll"
+        android:layout_width="fill_parent"    
+        android:layout_height="161dp">
+        
+	    <!--  <android.support.v4.view.PagerTitleStrip  
+            android:id="@+id/pagertitle"    
+            android:layout_width="wrap_content"    
+            android:layout_height="wrap_content"    
+            android:layout_gravity="top"  
+            />  -->
+    </android.support.v4.view.ViewPager>
+    
+    <RelativeLayout    
+        android:layout_width="fill_parent"    
+        android:layout_height="161dp"   
+        android:orientation="vertical" >    
+    
+        <LinearLayout    
+            android:id="@+id/scroll_image_Group"    
+            android:layout_width="fill_parent"    
+            android:layout_height="wrap_content"    
+            android:layout_alignParentBottom="true"   
+            android:layout_marginBottom="10dp"    
+            android:gravity="center_horizontal"    
+            android:orientation="horizontal" >    
+        </LinearLayout>    
+        
+    </RelativeLayout>   
+    
+</FrameLayout>

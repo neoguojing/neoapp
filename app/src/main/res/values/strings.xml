@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">neoapp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- for menus -->
+    <string name="intent_menu">Intent</string>
+    <string name="intent_menu_webbrowser">WebBrowser</string>
+    <string name="intent_menu_websearch">WebSearch</string>
+    <string name="intent_menu_dial">Dial</string>
+    <string name="intent_menu_map">Map</string>
+
+    <!-- for databases -->
+    <string name="db_menu">DataBase</string>
+    
+    <!-- for DBOprActivity and NavigationDrawerFragment -->
+    <string name="title_activity_dbopr">DBOprActivity</string>
+    <string name="title_section1">DataBase Info</string>
+    <string name="title_section2">...</string>
+    <string name="title_section3">...</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    
+    <!-- for weixin or other app -->
+    <string name="action_search">查找</string>
+    <string name="action_add">添加</string>
+    <string name="menu_group_chat">发起群聊</string>
+    <string name="menu_feedback">意见反馈</string>
+    <string name="menu_addfriend">添加朋友</string>
+    <string name="menu_scan">扫一扫</string>
+    <string name="tab_contact">通讯录</string>
+    <string name="tab_found">发现</string>
+    <string name="tab_me">我</string>
+    
+
+</resources>

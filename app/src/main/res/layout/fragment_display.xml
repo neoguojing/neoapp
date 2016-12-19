@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+    
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	    
+	    <include layout="@layout/include_scroll_image"
+	    />
+	    
+	    <include layout="@layout/include_grid_view"
+	    />
+	    
+	    <include layout="@layout/include_multi_scroll_image"
+	    />
+		
+	    <include layout="@layout/include_tabhost_view"
+	    />
+	</LinearLayout>
+</ScrollView>

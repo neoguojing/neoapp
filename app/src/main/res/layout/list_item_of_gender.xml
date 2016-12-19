@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+  <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingTop="20dp">
+	
+	     <com.neo.neoapp.UI.views.NeoBasicTextView
+	            android:id="@+id/string_name_for_checkbox_list"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginStart="20dp"
+	            android:layout_marginLeft="20dp"
+	            android:textSize="18sp"
+	            android:layout_gravity="start"
+	            android:text="相册" />
+     
+	     <RadioGroup
+	         android:id="@+id/radioGroup_list"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:contentDescription="性别"
+	         android:orientation="horizontal"
+	         android:layout_alignParentRight="true"
+	         android:layout_alignParentEnd="true">
+	         
+	        <RadioButton 
+	     	    android:layout_width="wrap_content" 
+	     	    android:layout_height="wrap_content"
+	     	    android:id="@+id/radioFemale_list" 
+	     	    android:text="女">
+	     	    
+	     	</RadioButton>   
+	     	<RadioButton 
+	     	    android:layout_width="wrap_content" 
+	     	    android:layout_height="wrap_content" 
+	     	    android:id="@+id/radioMale_list" 
+	     	    android:text="男" 
+	     	    android:checked="true">
+	     	    
+	     	</RadioButton>
+	     	 
+	  	</RadioGroup>
+
+
+    </RelativeLayout>
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+
+</LinearLayout>

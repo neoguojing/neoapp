@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+        
+        <com.neo.neoapp.UI.views.NeoBasicTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="个人信息修改" 
+                    android:textSize="20sp"/>
+     </LinearLayout>
+     
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingTop="20dp">
+
+        <com.neo.neoapp.UI.views.NeoBasicTextView
+            android:id="@+id/me_edit_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_gravity="start"
+            android:text="姓名" />
+        
+        <EditText 
+            android:id="@+id/me_edit_value_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:text="相册" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingTop="20dp">
+
+        <com.neo.neoapp.UI.views.NeoBasicTextView
+            android:id="@+id/me_edit_title_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_gravity="start"
+            android:text="签名" />
+        
+        <EditText 
+            android:id="@+id/me_edit_value_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:text="相册" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingTop="20dp">
+
+        <com.neo.neoapp.UI.views.NeoBasicTextView
+            android:id="@+id/me_edit_title_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_gravity="start"
+            android:text="年龄" />
+        
+        <com.neo.neoapp.UI.views.NeoBasicTextView 
+            android:id="@+id/me_edit_value_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:text="相册" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingTop="20dp">
+
+        <com.neo.neoapp.UI.views.NeoBasicTextView
+            android:id="@+id/me_edit_title_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_gravity="start"
+            android:text="生日" />
+        
+        <com.neo.neoapp.UI.views.NeoBasicTextView 
+            android:id="@+id/me_edit_value_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:text="相册" />
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingTop="20dp">
+	
+	     <com.neo.neoapp.UI.views.NeoBasicTextView
+	            android:id="@+id/me_edit_title_gender"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginStart="20dp"
+	            android:layout_marginLeft="20dp"
+	            android:textSize="18sp"
+	            android:layout_gravity="start"
+	            android:text="性别" />
+     
+	     <RadioGroup
+	         android:id="@+id/me_edit_radioGroup"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:contentDescription="性别"
+	         android:orientation="horizontal"
+	         android:layout_alignParentRight="true"
+	         android:layout_alignParentEnd="true"
+	         android:layout_marginRight="20dp">
+	         
+	        <RadioButton 
+	     	    android:layout_width="wrap_content" 
+	     	    android:layout_height="wrap_content"
+	     	    android:id="@+id/me_edit_radioFemale" 
+	     	    android:text="女">
+	     	    
+	     	</RadioButton>   
+	     	<RadioButton 
+	     	    android:layout_width="wrap_content" 
+	     	    android:layout_height="wrap_content" 
+	     	    android:id="@+id/me_edit_radioMale" 
+	     	    android:text="男" 
+	     	    android:checked="true">
+	     	    
+	     	</RadioButton>
+	     	 
+	  	</RadioGroup>
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+    
+    <RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingTop="20dp">
+
+        <com.neo.neoapp.UI.views.NeoBasicTextView
+            android:id="@+id/me_edit_title_industry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:layout_gravity="start"
+            android:text="行业" />
+        
+        <EditText 
+            android:id="@+id/me_edit_value_industry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            android:layout_alignParentRight="true"
+            android:textSize="16sp"
+            android:text="相册" />
+
+    </RelativeLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+    
+    <Button android:id="@+id/me_edit_value_button"
+	    android:layout_height="wrap_content"
+	    android:layout_width="fill_parent"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	    android:layout_marginTop="20dp"
+	    android:text="提交"
+	    android:background="#DC143C"
+     />
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/devideline_listview" />
+
+</LinearLayout>

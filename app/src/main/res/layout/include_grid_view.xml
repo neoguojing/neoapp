@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" 
+    android:layout_marginTop="10dp">
+
+    <com.neo.neoapp.UI.views.NeoNoScrollGridView
+        android:id="@+id/grid_for_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="4">
+    </com.neo.neoapp.UI.views.NeoNoScrollGridView>
+
+</LinearLayout>
