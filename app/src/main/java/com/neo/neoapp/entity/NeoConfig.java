@@ -25,8 +25,8 @@ public class NeoConfig extends Entity implements Parcelable {
 	}
 	
 	public NeoConfig() {
-		this.ip = "";
-		this.port = "10000";
+		this.ip = "115.159.84.57";
+		this.port = "80";
 		this.name = "neo";
 	}
 

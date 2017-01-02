@@ -70,7 +70,6 @@ public class WelcomeActivity extends NeoBasicActivity implements OnClickListener
         setContentView(R.layout.activity_welcome);
         initViews();
         initEvents();
-        initNetWorkData();
         initData();
         showWelcomeAnimation();
         
@@ -179,48 +178,6 @@ public class WelcomeActivity extends NeoBasicActivity implements OnClickListener
                 }
             }
         });
-    }
-
-    private void initNetWorkData() {
-        if (initNetWorkCheck(this)) {        	
-            NeoAsyncHttpUtil.get((Context) this, NeoAppSetings.IpServerUrl, new JsonHttpResponseHandler() {
-                public void onSuccess(int statusCode, Header[] headers, JSONArray arg0) {
-                    Log.i(WelcomeActivity.this.Tag, new StringBuilder(String.valueOf(arg0.length())).toString());
-                }
-
-                public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
-                    Log.e(WelcomeActivity.this.Tag, " onFailure" + throwable.toString());
-                    WelcomeActivity.this.showAlertDialog("NEO", "Get Server Address failed" + throwable.toString());
-                }
-
-                public void onFinish() {
-                    Log.i(WelcomeActivity.this.Tag, "onFinish");
-                }
-
-                public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                    super.onSuccess(statusCode, headers, response);
-                    Log.i(WelcomeActivity.this.Tag, "onSuccess ");
-                    try {
-                        WelcomeActivity.this.showLongToast("ip:" + response.getString(NeoConfig.IP) + ";port:" + response.getString(NeoConfig.PORT));
-                        //WelcomeActivity.this.mApplication.mNeoConfig = new NeoConfig(response.getString(NeoConfig.IP), response.getString(ClientCookie.PORT_ATTR), "neo");
-                        mApplication.mNeoConfig.setName("neo");
-                        mApplication.mNeoConfig.setIp(response.getString(NeoConfig.IP));
-                        mApplication.mNeoConfig.setPort(response.getString(NeoConfig.PORT));
-                        mApplication.mNeoConfig.setLocalip(NeoAppSetings.getLocalServerIp());
-                        mApplication.mNeoConfig.setLocalport("8080");
-                        FileUtils.overrideContent(new StringBuilder(
-                        		String.valueOf(FileUtils.getAppDataPath(WelcomeActivity.this))).
-                        		append(NeoAppSetings.ConfigFile).toString(), response.toString());
-                    } catch (Exception e) {
-                        Log.e(WelcomeActivity.this.Tag, e.toString());
-                    }
-                }
-
-                public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                    Log.e(WelcomeActivity.this.Tag, " onFailure" + throwable.toString());
-                }
-            });
-        }
     }
 
     private LOGIN_STATE checkLoginState() {

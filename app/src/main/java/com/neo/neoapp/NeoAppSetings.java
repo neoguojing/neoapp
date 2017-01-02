@@ -32,9 +32,9 @@ public class NeoAppSetings {
     private static String download_suffix = null;
     private static String getsvc_suffix = null;
     private static String headpic_suffix = null;
-    private static final String login_check_suffix = "/site1/android/logincheck/";
-    private static final String login_suffix = "/site1/android/login/";
-    private static final String logout_suffix = "/site1/android/logout/";
+    private static final String login_check_suffix = "/android/logincheck/";
+    private static final String login_suffix = "/android/login/";
+    private static final String logout_suffix = "/android/logout/";
     private static final String prefix = "http://";
     private static String register_suffix;
     
@@ -84,10 +84,10 @@ public class NeoAppSetings {
     }
 
     static {
-        register_suffix = "/site1/android/register/";
-        headpic_suffix = "/site1/android/headpic/";
-        getsvc_suffix = "/site1/android/get/";
-        download_suffix = "/site1/android/download/";
+        register_suffix = "/android/register/";
+        headpic_suffix = "/android/headpic/";
+        getsvc_suffix = "/android/get/";
+        download_suffix = "/android/download/";
     }
 
     public static Uri getServerUrl(String ip, String port) {
