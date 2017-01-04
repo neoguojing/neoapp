@@ -182,7 +182,8 @@ public class WelcomeActivity extends NeoBasicActivity implements OnClickListener
 
     private LOGIN_STATE checkLoginState() {
         if (netWorkCheck(this)) {
-
+            showAlertDialog("NEO",NeoAppSetings.getLoginCheckUrl(
+                    this.mApplication.mNeoConfig));
             NeoAsyncHttpUtil.get(this, NeoAppSetings.getLoginCheckUrl(
             		this.mApplication.mNeoConfig), new JsonHttpResponseHandler() {
                 public void onFinish() {
