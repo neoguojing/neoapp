@@ -4,3 +4,6 @@ build/*
 app/build/*
 
 webapp/build/*
+
+.gradle/*
+.idea/*

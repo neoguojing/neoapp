@@ -111,6 +111,9 @@ public class NeoImageUtil {
 	private static Bitmap createScaledBitMap(Bitmap src, int destWidth,
 			int destHeight) {
 		// TODO Auto-generated method stub
+		if (src==null){
+			return null;
+		}
 		Bitmap dest = Bitmap.createScaledBitmap(src,destWidth,destHeight, false);
 		if (dest!=src){
 			src.recycle();
